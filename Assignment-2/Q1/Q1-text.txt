@@ -1,0 +1,22 @@
+
+
+"""
+1. Pick one stock each of your choice from major sectors (Banking, Information Technology, Automobile,Pharmaceutical) in NSE/BSE.
+"""
+
+
+"""
+Exchange	Sector	        Stock Name	        Symbol
+NSE	        Banking	        HDFC Bank	        HDFCBANK
+NSE	        IT	            Infosys	            INFY
+NSE	        Automobile	    Maruti Suzuki	    MARUTI
+NSE	        Pharmaceutical	Sun Pharma	        SUNPHARMA
+
+
+Alternatives:
+        Banking: ICICIBANK, KOTAKBANK
+        IT:      TCS, WIPRO
+        Auto:    TATAMOTORS, M&M
+        Pharma:  DRREDDY, CIPLA
+"""
+

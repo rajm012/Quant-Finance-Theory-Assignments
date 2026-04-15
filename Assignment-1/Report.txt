@@ -1,0 +1,315 @@
+
+=================================================================================================
+=================================================================================================
+=================================================================================================
+=================================================================================================
+=================================================================================================
+
+Question 1: NIFTY 50 – Top 10 Constituents by Weight
+
+What to do: To identify the Top 10 constituents of NIFTY 50 by index weight for the current year and the past 10 years, and visualize their relative importance using pie charts.
+
+Steps:
+    Official NIFTY 50 constituent data was collected year-wise.
+    For each year, the top 10 stocks by index weight (%) were selected.
+    Pie charts were created to visualize relative index weight distribution.
+    Original index weights were preserved in labels, while visualization normalization was applied only for plotting.
+
+Observations:
+    A small number of large-cap stocks dominate the NIFTY 50 index.
+    Over time, sectoral leadership shifts are visible (e.g., banking and IT dominance in recent years).
+    The index exhibits high concentration, indicating that index performance is strongly influenced by a few heavyweight stocks.
+
+
+
+=================================================================================================
+=================================================================================================
+=================================================================================================
+=================================================================================================
+=================================================================================================
+
+Question 2: Gold vs Crude Oil – Price Correlation Analysis
+
+What to do: To analyze the relationship between Gold and Crude Oil prices over the last 10 years and study their correlation behavior.
+
+Steps:
+    Daily closing prices for Gold and Crude Oil were downloaded using yfinance.
+    Data was stored in CSV format to ensure reproducibility.
+    Prices were min–max normalized to enable comparison on the same scale.
+    Both assets were plotted on the same chart.
+    Additional year-wise plots were generated to observe changing correlations over time.
+
+Observations:
+    Gold and Crude Oil do not maintain a stable correlation across years.
+    During periods of economic uncertainty, Gold often behaves as a safe-haven asset, diverging from Crude Oil.
+    Year-wise analysis reveals that macroeconomic shocks significantly alter commodity relationships.
+    
+
+
+=================================================================================================
+=================================================================================================
+=================================================================================================
+=================================================================================================
+=================================================================================================
+
+
+Question 3: Sectoral Market Composition Analysis
+
+What to do: To analyze the sectoral composition of the Indian equity market using:
+        1. Market Capitalization (relative comparison)
+        2. Traded Volume (liquidity comparison)
+
+for the past 10 years.
+
+Sectors Analyzed:
+                Auto
+                Banking
+                Energy
+                FMCG
+                Pharma
+
+
+Steps: Two complementary analyses were performed:
+
+1. Market Capitalization (Index-Based Proxy)
+    Since exact sector-wise NSE market capitalization data is not directly available in comparable form, sector index levels were used as a proxy for relative market size.
+    Sector indices are market-cap weighted, making them suitable for relative comparison.
+    Year-end index close values were used for each sector.
+    Donut charts were plotted to visualize relative sector dominance.
+
+2. Traded Volume (₹ Crores)
+    Daily Turnover (₹ Cr) values were aggregated year-wise.
+    This represents total trading activity and liquidity for each sector.
+    Donut charts were plotted to show distribution of traded volume across sectors.
+
+Observations:
+    Banking and Energy sectors generally dominate in terms of market capitalization proxy.
+    FMCG and Pharma show relatively lower volatility, indicating defensive sector characteristics.
+    Traded volume analysis highlights periods of heightened investor interest in cyclical sectors such as Auto and Banking.
+    Market capitalization and trading volume dominance do not always coincide, highlighting the difference between value concentration and liquidity concentration.
+
+
+=================================================================================================
+=================================================================================================
+=================================================================================================
+=================================================================================================
+=================================================================================================
+
+
+Conclusion:
+    The three analyses together provide insights into index concentration, inter-asset relationships, and sectoral market structure.
+    Relative, proxy-based analysis was used wherever direct absolute data was unavailable, ensuring conceptual correctness.
+    The methodology emphasizes consistency of units, financial validity, and interpretability, making the analysis reliable and defensible.
+
+
+
+=================================================================================================
+=================================================================================================
+=================================================================================================
+=================================================================================================
+=================================================================================================
+
+Structure:
+│   Assignment-1.pdf
+│   Q1.py
+│   Q2.py
+│   Q3.py
+│   Report.txt
+│   
+├───Data-Q3
+│   ├───1-Auto
+│   │       NIFTY AUTO-05-02-2016-to-05-02-2017.csv
+│   │       NIFTY AUTO-05-02-2017-to-05-02-2018.csv
+│   │       NIFTY AUTO-05-02-2018-to-05-02-2019.csv
+│   │       NIFTY AUTO-05-02-2019-to-05-02-2020.csv
+│   │       NIFTY AUTO-05-02-2020-to-05-02-2021.csv
+│   │       NIFTY AUTO-05-02-2021-to-05-02-2022.csv
+│   │       NIFTY AUTO-05-02-2022-to-05-02-2023.csv
+│   │       NIFTY AUTO-05-02-2023-to-05-02-2024.csv
+│   │       NIFTY AUTO-05-02-2024-to-05-02-2025.csv
+│   │       NIFTY AUTO-05-02-2025-to-05-02-2026.csv
+│   │       
+│   ├───2-Bank
+│   │       NIFTY BANK-05-02-2016-to-05-02-2017.csv
+│   │       NIFTY BANK-05-02-2017-to-05-02-2018.csv
+│   │       NIFTY BANK-05-02-2018-to-05-02-2019.csv
+│   │       NIFTY BANK-05-02-2019-to-05-02-2020.csv
+│   │       NIFTY BANK-05-02-2020-to-05-02-2021.csv
+│   │       NIFTY BANK-05-02-2021-to-05-02-2022.csv
+│   │       NIFTY BANK-05-02-2022-to-05-02-2023.csv
+│   │       NIFTY BANK-05-02-2023-to-05-02-2024.csv
+│   │       NIFTY BANK-05-02-2024-to-05-02-2025.csv
+│   │       NIFTY BANK-05-02-2025-to-05-02-2026.csv
+│   │       
+│   ├───3-Energy
+│   │       NIFTY ENERGY-05-02-2016-to-05-02-2017.csv
+│   │       NIFTY ENERGY-05-02-2017-to-05-02-2018.csv
+│   │       NIFTY ENERGY-05-02-2018-to-05-02-2019.csv
+│   │       NIFTY ENERGY-05-02-2019-to-05-02-2020.csv
+│   │       NIFTY ENERGY-05-02-2020-to-05-02-2021.csv
+│   │       NIFTY ENERGY-05-02-2021-to-05-02-2022.csv
+│   │       NIFTY ENERGY-05-02-2022-to-05-02-2023.csv
+│   │       NIFTY ENERGY-05-02-2023-to-05-02-2024.csv
+│   │       NIFTY ENERGY-05-02-2024-to-05-02-2025.csv
+│   │       NIFTY ENERGY-05-02-2025-to-05-02-2026.csv
+│   │
+│   ├───4-FMCG
+│   │       NIFTY FMCG-05-02-2016-to-05-02-2017.csv
+│   │       NIFTY FMCG-05-02-2017-to-05-02-2018.csv
+│   │       NIFTY FMCG-05-02-2018-to-05-02-2019.csv
+│   │       NIFTY FMCG-05-02-2019-to-05-02-2020.csv
+│   │       NIFTY FMCG-05-02-2020-to-05-02-2021.csv
+│   │       NIFTY FMCG-05-02-2021-to-05-02-2022.csv
+│   │       NIFTY FMCG-05-02-2022-to-05-02-2023.csv
+│   │       NIFTY FMCG-05-02-2023-to-05-02-2024.csv
+│   │       NIFTY FMCG-05-02-2024-to-05-02-2025.csv
+│   │       NIFTY FMCG-05-02-2025-to-05-02-2026.csv
+│   │
+│   ├───5-Pharma
+│   │       NIFTY PHARMA-05-02-2016-to-05-02-2017.csv
+│   │       NIFTY PHARMA-05-02-2017-to-05-02-2018.csv
+│   │       NIFTY PHARMA-05-02-2018-to-05-02-2019.csv
+│   │       NIFTY PHARMA-05-02-2019-to-05-02-2020.csv
+│   │       NIFTY PHARMA-05-02-2020-to-05-02-2021.csv
+│   │       NIFTY PHARMA-05-02-2021-to-05-02-2022.csv
+│   │       NIFTY PHARMA-05-02-2022-to-05-02-2023.csv
+│   │       NIFTY PHARMA-05-02-2023-to-05-02-2024.csv
+│   │       NIFTY PHARMA-05-02-2024-to-05-02-2025.csv
+│   │       NIFTY PHARMA-05-02-2025-to-05-02-2026.csv
+│   │
+│   └───Sector-10yrs
+│           NIFTY_AUTO.csv
+│           NIFTY_BANK.csv
+│           NIFTY_ENERGY.csv
+│           NIFTY_FIFTY.csv
+│           NIFTY_FMCG.csv
+│           NIFTY_PHARMA.csv
+│
+├───Output-Q1
+│   │   nifty50_constituents_all_years.csv
+│   │
+│   ├───nifty
+│   │       NIFTY_50_Jan2016.pdf
+│   │       NIFTY_50_Jan2017.pdf
+│   │       NIFTY_50_Jan2018.pdf
+│   │       NIFTY_50_Jan2019.pdf
+│   │       NIFTY_50_Jan2020.pdf
+│   │       NIFTY_50_Jan2021.pdf
+│   │       NIFTY_50_Jan2022.pdf
+│   │       NIFTY_50_Jan2023.pdf
+│   │       NIFTY_50_Jan2024.pdf
+│   │       NIFTY_50_Jan2025.pdf
+│   │       NIFTY_50_Jan2026.pdf
+│   │
+│   ├───Q1-Output-Actual-Percentage
+│   │       nifty50_top10_2016.png
+│   │       nifty50_top10_2017.png
+│   │       nifty50_top10_2018.png
+│   │       nifty50_top10_2019.png
+│   │       nifty50_top10_2020.png
+│   │       nifty50_top10_2021.png
+│   │       nifty50_top10_2022.png
+│   │       nifty50_top10_2023.png
+│   │       nifty50_top10_2024.png
+│   │       nifty50_top10_2025.png
+│   │       nifty50_top10_2026.png
+│   │
+│   └───Q1-Output-Normalized-Percentage
+│           nifty50_top10_2016.png
+│           nifty50_top10_2017.png
+│           nifty50_top10_2018.png
+│           nifty50_top10_2019.png
+│           nifty50_top10_2020.png
+│           nifty50_top10_2021.png
+│           nifty50_top10_2022.png
+│           nifty50_top10_2023.png
+│           nifty50_top10_2024.png
+│           nifty50_top10_2025.png
+│           nifty50_top10_2026.png
+│
+├───Output-Q2
+│       Goldcrude10y.csv
+│       GoldvsCride10Yr.png
+│       gold_crude_2016.png
+│       gold_crude_2017.png
+│       gold_crude_2018.png
+│       gold_crude_2019.png
+│       gold_crude_2020.png
+│       gold_crude_2021.png
+│       gold_crude_2022.png
+│       gold_crude_2023.png
+│       gold_crude_2024.png
+│       gold_crude_2025.png
+│       gold_crude_2026.png
+│
+└───Output-Q3
+        1-AllStocks.py
+        2-Combine.py
+        3-Nifty.py
+        marketcap_2017.png
+        marketcap_2018.png
+        marketcap_2019.png
+        marketcap_2020.png
+        marketcap_2021.png
+        marketcap_2022.png
+        marketcap_2023.png
+        marketcap_2024.png
+        marketcap_2025.png
+        marketcap_2026.png
+        marketcap_vs_nse_2016.png
+        marketcap_vs_nse_2017.png
+        marketcap_vs_nse_2018.png
+        marketcap_vs_nse_2019.png
+        marketcap_vs_nse_2020.png
+        marketcap_vs_nse_2021.png
+        marketcap_vs_nse_2022.png
+        marketcap_vs_nse_2023.png
+        marketcap_vs_nse_2024.png
+        marketcap_vs_nse_2025.png
+        volume_2017.png
+        volume_2018.png
+        volume_2019.png
+        volume_2020.png
+        volume_2021.png
+        volume_2022.png
+        volume_2023.png
+        volume_2024.png
+        volume_2025.png
+        volume_2026.png
+        volume_vs_nse_2016.png
+        volume_vs_nse_2017.png
+        volume_vs_nse_2018.png
+        volume_vs_nse_2019.png
+        volume_vs_nse_2020.png
+        volume_vs_nse_2021.png
+        volume_vs_nse_2022.png
+        volume_vs_nse_2023.png
+        volume_vs_nse_2024.png
+        volume_vs_nse_2025.png
+        yearly_interpretations.txt
+        
+(base) PS E:\Finance> 
+
+
+
+
+1. These 3 files holds the codes fro the main Assignment, report of the assignment and the assignment pdf.
+
+│   Assignment-1.pdf
+│   Q1.py
+│   Q2.py
+│   Q3.py
+│   Report.txt
+
+
+2. Data-Q3: Has data for the Nifty's major sector index to be used for the volume and capital caluclutaions
+
+3. Output-Q1, Q2, Q3: Has all the results expected from the Q1, Q2, Q3; All results are self explaintory
+
+
+Credits:
+    self
+    AI tools
+
+In whole assignment logic and basic snippets by self but optimizations and formatting by the Ai tools and I feel no shame in it.
+
